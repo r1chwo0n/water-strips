@@ -1,1 +1,1 @@
-# Frontend-water-strips
+# water-strips
