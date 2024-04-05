@@ -28,3 +28,11 @@
   right: 14.54%;
   background: #e7e7e7;
 }
+.boxColor {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  top: 255px;
+  left: 215px;
+  border-radius: 10px;
+}
