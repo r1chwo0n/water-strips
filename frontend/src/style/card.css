@@ -5,28 +5,12 @@
   background: #92c5e8;
   border-radius: 20px;
 }
-.arial {
-  font-family: Arial;
-}
 .EllipseBlue {
   position: absolute;
   width: 200px;
   height: 200px;
   border-radius: 100px;
   background: #4699cd;
-}
-.RectangleGrey {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  background: #dedede;
-  border-radius: 20px;
-}
-.EllipseGrey {
-  position: absolute;
-  left: 14.54%;
-  right: 14.54%;
-  background: #e7e7e7;
 }
 .boxColor {
   position: absolute;
