@@ -5,7 +5,7 @@ export default function Card() {
   };
   return (
     <>
-      <div className="RectangleBlue mt-24 arial">
+      <div className="RectangleBlue mt-24 font-['Arial']">
         <div className="boxColor" style={colorStyle}></div>
         <div className="EllipseBlue ml-10 -mt-24">
           {/* <img

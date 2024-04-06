@@ -1,10 +1,14 @@
 import "./App.css";
 import Card from "./component/Card";
+import NewCard from "./component/NewCard";
 
 function App() {
   return (
     <>
-      <Card></Card>
+      <div className="flex justify-center items-center h-screen">
+        <NewCard />
+        {/* <Card /> */}
+      </div>
     </>
   );
 }
