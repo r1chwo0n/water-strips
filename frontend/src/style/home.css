@@ -32,3 +32,6 @@
 .transition-underline:hover::before {
   width: 100%;
 }
+.boxShadow {
+  box-shadow: inset 4px 4px 4px rgba(167, 167, 167, 0.25);
+}

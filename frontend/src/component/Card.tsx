@@ -1,12 +1,9 @@
 import "../style/card.css";
 export default function Card() {
-  const colorStyle = {
-    backgroundColor: "#D9D9D9",
-  };
   return (
     <>
       <div className="RectangleBlue mt-24 font-['Arial']">
-        <div className="boxColor" style={colorStyle}></div>
+        <div className="boxColor" style={{ backgroundColor: "#D9D9D9" }}></div>
         <div className="EllipseBlue ml-10 -mt-24">
           {/* <img
             className="rounded-full"
