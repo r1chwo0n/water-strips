@@ -11,16 +11,19 @@ export default function Home() {
           alignItems: "center",
           justifyContent: "space-between",
           padding: "0 20px",
-          position: "fixed", // Fixed position to keep it at the top
-          top: 0, // Stick to the top of the viewport
+          position: "fixed",
+          top: 0,
         }}
       >
-        <h1 className="fontLeague text-4xl">AQUAlity</h1>
+        <div className="flex items-center">
+          <img className="w-18 h-16" src="src\\pic\\logo.png"></img>
+          <h1 className="fontLeague text-4xl">AQUAlity</h1>
+        </div>
         <div className="flex text-lg font-['Arial']">
           <div className="relative mr-4 transition-underline">
             <a href="#">sign in</a>
           </div>
-          <span className="text-gray-700 mr-4">|</span>
+          <span className="text-black mr-4">|</span>
           <div className="relative transition-underline">
             <a href="#">sign up</a>
           </div>
@@ -28,17 +31,21 @@ export default function Home() {
       </div>
       <div
         style={{
+          position: "absolute",
+          top: "80px",
+          left: "50%",
+          transform: "translateX(-50%)",
           backgroundColor: "#C9E0EF",
           width: "100vw",
-          minHeight: "100vh",
+          minHeight: "calc(100vh - 80px)",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center", // Center content vertically
-          alignItems: "center", // Center content horizontally
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         {/* Content */}
-        <div className="flex flex-col md:flex-row items-center md:items-start mt-56 md:mt-0">
+        <div className="flex flex-col md:flex-row items-center md:items-start mt-8 md:mt-0">
           <div className="md:mr-20">
             <img
               className="rounded-full size-96 md:size-96"
