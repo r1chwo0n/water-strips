@@ -6,3 +6,53 @@
 .fontLeague {
   font-family: league;
 }
+
+/* Rectangle 7 */
+.searchbox {
+  position: absolute;
+  width: 404px;
+  height: 48px;
+  background: #d9d9d9;
+  border-radius: 50px;
+}
+
+/* Search history */
+.Searchhistory {
+  position: absolute;
+  width: 154px;
+  height: 28px;
+  left: 547px;
+  top: 54px;
+
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #878585;
+}
+
+/* material-symbols:search */
+.material-symbols {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 512px;
+  top: 56px;
+}
+
+/* Vector */
+.vector {
+  position: absolute;
+  left: 12.5%;
+  right: 12.5%;
+  top: 12.5%;
+  bottom: 12.5%;
+
+  background: #878585;
+}
