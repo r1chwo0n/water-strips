@@ -27,7 +27,8 @@ export default function History() {
           <input
             type="text"
             placeholder="Search History"
-            className="border border-gray-300 rounded-md py-1 px-2 md:py-1 md:px-3 focus:outline-none focus:ring focus:border-blue-300"
+            style={{ backgroundColor: "#D9D9D9" }}
+            className="border rounded-2xl w-48 h-7 px-2 md:px-2 md:w-96 md:h-8 focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
         <div className="flex text-base md:text-lg font-['Arial'] items-center">

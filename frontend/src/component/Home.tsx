@@ -1,5 +1,14 @@
+import { useDispatch } from "react-redux";
 import "../style/home.css";
+import { appStateType, setAppState } from "../store/Slices/webSocketSlice";
 export default function Home() {
+  const dispatch = useDispatch();
+  const clickedtoSignIn = () => {
+    dispatch(setAppState(appStateType.SIGNIN));
+  };
+  const clickedtoSignUp = () => {
+    dispatch(setAppState(appStateType.SIGNUP));
+  };
   return (
     <>
       <div
@@ -16,17 +25,28 @@ export default function Home() {
         }}
       >
         <div className="flex items-center">
-          <img className="w-18 h-16" src="src\\pic\\logo.png"></img>
-          <h1 className="fontLeague text-4xl">AQUAlity</h1>
+          <img
+            className="w-14 h-12 md:w-20 md:h-16"
+            src="src\\pic\\logo.png"
+          ></img>
+          <h1 className="fontLeague text-2xl md:text-4xl">AQUAlity</h1>
         </div>
-        <div className="flex text-lg font-['Arial']">
-          <div className="relative mr-4 transition-underline">
-            <a href="#">sign in</a>
-          </div>
+        <div className="flex md:text-lg font-['Arial'] text-base">
+          <button
+            className="relative mr-4 transition-underline"
+            type="button"
+            onClick={clickedtoSignIn}
+          >
+            sign in
+          </button>
           <span className="text-black mr-4">|</span>
-          <div className="relative transition-underline">
-            <a href="#">sign up</a>
-          </div>
+          <button
+            className="relative transition-underline"
+            type="button"
+            onClick={clickedtoSignUp}
+          >
+            sign up
+          </button>
         </div>
       </div>
       <div

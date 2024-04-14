@@ -11,8 +11,7 @@
 .searchbox {
   position: absolute;
   width: 404px;
-  height: 48px;
-  background: #d9d9d9;
+  height: 40px;
   border-radius: 50px;
 }
 
