@@ -1,16 +1,21 @@
+import { useState } from "react";
 import "../style/signin.css";
 export default function SignIn() {
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <>
       <img
-        className="relative w-[600px] h-[320px] mt-48"
+        className="relative w-[600px] h-[340px] mt-48"
         src="src\pic\signinframe.png"
       ></img>
-      <div className="absolute flex flex-col font-['Arial']">
+      <div className="absolute flex flex-col space-y-1 font-['Arial']">
         <div className="flex flex-col justify-center items-center">
           <h1 className="font-bold text-4xl text-center">Sign In</h1>
           <img
-            src="src\pic\open.png"
+            src={showPassword ? "src\\pic\\close.png" : "src\\pic\\open.png"}
             className="relative w-[250px] h-[150px]"
           />
         </div>
@@ -20,18 +25,41 @@ export default function SignIn() {
             className="appearance-none border rounded-xl w-[300px] h-[30px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             style={{ backgroundColor: "#d9d9d9" }}
             placeholder="Email"
-            // pattern="[a-zA-Z0-9._%+-]+@gmail\.com"
             required
           ></input>
         </div>
         <div>
           <h2 className="font-bold py-3">Password</h2>
-          <input
-            className="appearance-none border rounded-xl w-[300px] h-[30px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            style={{ backgroundColor: "#d9d9d9" }}
-            placeholder="Password"
-            required
-          ></input>
+          <div style={{ position: "relative", width: "fit-content" }}>
+            <input
+              className="appearance-none border rounded-xl w-[300px] h-[30px] py-2 px-3 pr-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              style={{ backgroundColor: "#d9d9d9" }}
+              placeholder="Password"
+              required
+            />
+            <button
+              onClick={togglePasswordVisibility}
+              style={{
+                position: "absolute",
+                right: "5px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                border: "none",
+                background: "none",
+                cursor: "pointer",
+              }}
+            >
+              <img
+                src={
+                  showPassword
+                    ? "src\\pic\\openureye.png"
+                    : "src\\pic\\closeureye.png"
+                }
+                alt={showPassword ? "Open icon" : "Close icon"}
+                style={{ width: "20px", height: "20px" }}
+              />
+            </button>
+          </div>
         </div>
         <div className="flex justify-between">
           <button
