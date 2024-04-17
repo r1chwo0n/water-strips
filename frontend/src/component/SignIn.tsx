@@ -1,9 +1,15 @@
 import { useState } from "react";
 import "../style/signin.css";
+import { useDispatch } from "react-redux";
+import { appStateType, setAppState } from "../store/Slices/webSocketSlice";
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+  const dispatch = useDispatch();
+  const clickedtoSignUp = () => {
+    dispatch(setAppState(appStateType.SIGNUP));
   };
   return (
     <>
@@ -71,6 +77,7 @@ export default function SignIn() {
           <button
             className="relative transition-underline font-bold"
             type="button"
+            onClick={clickedtoSignUp}
           >
             sign up
           </button>

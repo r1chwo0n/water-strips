@@ -9,6 +9,9 @@ export default function Home() {
   const clickedtoSignUp = () => {
     dispatch(setAppState(appStateType.SIGNUP));
   };
+  const clickedtoHistory = () => {
+    dispatch(setAppState(appStateType.HISTORY));
+  };
   return (
     <>
       <div
@@ -77,7 +80,10 @@ export default function Home() {
             <h1 className="text-lg">Capture. Analyze. Know your</h1>
             <h1 className="text-4xl mt-2">water</h1>
             <h1 className="text-4xl">quality</h1>
-            <button className="w-72 h-11 text-2xl mt-6 md:mt-4 mb-6 bg-white rounded-2xl boxShadow hover:bg-gray-200">
+            <button
+              className="w-72 h-11 text-2xl mt-6 md:mt-4 mb-6 bg-white rounded-2xl boxShadow hover:bg-gray-200"
+              onClick={clickedtoHistory}
+            >
               START TEST
             </button>
           </div>

@@ -13,10 +13,12 @@ function App() {
   return (
     <>
       <div className="flex justify-center items-center h-screen">
-        {/* {webSocketState.appState == appStateType.HOME && <Home />}
+        {webSocketState.appState == appStateType.HOME && <Home />}
         {webSocketState.appState == appStateType.SIGNIN && <SignIn />}
-        {webSocketState.appState == appStateType.SIGNUP && <SignUp />} */}
-        <SignIn />
+        {webSocketState.appState == appStateType.SIGNUP && <SignUp />}
+        {webSocketState.appState == appStateType.HISTORY && <History />}
+        {/* <SignIn />
+        <SignUp /> */}
       </div>
     </>
   );
