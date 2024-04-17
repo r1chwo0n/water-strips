@@ -11,6 +11,7 @@ export enum appStateType { //เอาไว้เปลี่ยนหน้า
   HOME = "HOME",
   SIGNIN = "SIGNIN",
   SIGNUP = "SIGNUP",
+  HISTORY = "HOSTORY",
 }
 
 interface webSocketMessage {
