@@ -14,10 +14,10 @@ export default function SignIn() {
   return (
     <>
       <img
-        className="relative w-[600px] h-[340px] mt-48"
+        className="relative w-[600px] h-[360px] mt-52"
         src="src\pic\signinframe.png"
       ></img>
-      <div className="absolute flex flex-col space-y-1 font-['Arial']">
+      <div className="absolute flex flex-col space-y-1 font-['Arial'] items-center justify-center">
         <div className="flex flex-col justify-center items-center">
           <h1 className="font-bold text-4xl text-center">Sign In</h1>
           <img
@@ -67,7 +67,7 @@ export default function SignIn() {
             </button>
           </div>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between space-x-24">
           <button
             className="relative text-xs text-red-500 hover:text-red-300"
             type="button"
@@ -113,6 +113,10 @@ export default function SignIn() {
             <h2 className="ml-2 font-bold">Facebook</h2>
           </button>
         </div>
+        <div className="py-1"></div>
+        <button className="rectangleSignIn font-bold hover:bg-blue-900">
+          Sign In
+        </button>
       </div>
     </>
   );

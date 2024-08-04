@@ -1,5 +1,4 @@
 import "../style/history.css";
-import NewCard from "./NewCard";
 
 export default function History() {
   return (
@@ -44,7 +43,6 @@ export default function History() {
             />
           </div>
         </div>
-        {/* <NewCard /> */}
       </div>
     </>
   );

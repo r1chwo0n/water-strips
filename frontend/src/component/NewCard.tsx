@@ -8,7 +8,7 @@ export default function NewCard() {
   };
   return (
     <>
-      <div className="RectangleforNew mt-24 font-['Arial']" style={recColor}>
+      <div className="RectangleforNew font-['Arial']" style={recColor}>
         <div className="absolute font-bold text-3xl text-neutral-400 inset-0 flex justify-center items-center">
           Add new
         </div>
