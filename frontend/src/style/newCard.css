@@ -1,5 +1,6 @@
 .RectangleforNew {
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   width: 282px;
   height: 320px;
   border-radius: 20px;

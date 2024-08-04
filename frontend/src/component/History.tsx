@@ -1,11 +1,13 @@
 import "../style/history.css";
 import NewCard from "./NewCard";
+import "../style/Scrollbar.css"
+import Card from "./Card"
 
 export default function History() {
   return (
     <>
       <div
-        style={{
+        style={{//แถบขาวบนสุด
           backgroundColor: "white",
           width: "100%",
           height: "80px",
@@ -15,8 +17,10 @@ export default function History() {
           padding: "0 20px",
           position: "fixed",
           top: 0,
+          zIndex: 10,
         }}
       >
+        
         <div className="flex items-center">
           <img
             className="w-14 h-12 md:w-20 md:h-16"
@@ -29,9 +33,36 @@ export default function History() {
             type="text"
             placeholder="Search History"
             style={{ backgroundColor: "#D9D9D9" }}
-            className="border rounded-2xl w-48 h-7 px-2 md:px-2 md:w-96 md:h-8 focus:outline-none focus:ring focus:border-blue-300"
+            className="border rounded-2xl w-48 h-7 px-2 md:px-2 ml-20 md:w-96 md:h-8 focus:outline-none focus:ring focus:border-blue-300 "
           />
         </div>
+        <div
+          className="scroll-container" 
+          style={{
+
+            position: "relative",
+            display: "flex",
+            flexDirection: "row",
+            overflowX: "scroll",
+            padding: "80px",
+            width: "100%", // Adjust width as needed
+            marginBottom: "-700px", // Margin from the bottom
+            marginLeft: "-500px"
+
+          }}
+        >
+          <NewCard />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          {/* Add more NewCard components as needed */}
+        </div>
+        
         <div className="flex text-base md:text-lg font-['Arial'] items-center">
           <div className="relative mr-2">
             <h1>username</h1>
@@ -44,7 +75,23 @@ export default function History() {
             />
           </div>
         </div>
-        {/* <NewCard /> */}
+
+        
+
+        <div style={{ paddingTop: "100px" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "calc(100vh - 100px)", // Adjust height to account for header
+          }}
+        >
+         
+        </div>
+        </div>
+       
       </div>
     </>
   );

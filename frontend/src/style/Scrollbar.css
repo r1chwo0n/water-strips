@@ -1,0 +1,24 @@
+/* WebKit Browsers (Chrome, Safari) */
+.scroll-container::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
+  }
+  
+  .scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f100; /* Background color of the scrollbar track */
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: #88888800; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555555; /* Color of the scrollbar thumb on hover */
+  }
+  
+  /* Firefox */
+  .scroll-container {
+    scrollbar-width: thin; /* Options: auto, thin, or none */
+    scrollbar-color: #3a6b8a #f1f1f100; /* Thumb and Track color */
+  }
+  

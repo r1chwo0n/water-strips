@@ -8,12 +8,12 @@ export default function NewCard() {
   };
   return (
     <>
-      <div className="RectangleforNew mt-24 font-['Arial']" style={recColor}>
+      <div className="RectangleforNew mt-24 ml-20 font-['Arial']" style={recColor}>
         <div className="absolute font-bold text-3xl text-neutral-400 inset-0 flex justify-center items-center">
           Add new
         </div>
         <div
-          className="EllipseforNew ml-10 -mt-24 relative"
+          className="EllipseforNew ml-10 mr-10 -mt-24 relative"
           style={ellipseColor}
         >
           <div className="absolute inset-0 flex justify-center items-center">
