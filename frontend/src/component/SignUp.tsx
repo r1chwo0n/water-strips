@@ -1,7 +1,20 @@
 import { useDispatch } from "react-redux";
 import "../style/signup.css";
 import { appStateType, setAppState } from "../store/Slices/webSocketSlice";
+import { useNavigate } from 'react-router-dom';
+
+
 export default function SignUp() {
+
+  const navigate = useNavigate();
+
+  
+  const handleSignIn = () => {
+    navigate('/signin');
+  };
+
+
+
   const dispatch = useDispatch();
   const clickedtoSignIn = () => {
     dispatch(setAppState(appStateType.SIGNIN));
@@ -19,7 +32,7 @@ export default function SignUp() {
           <button
             className="relative transition-underline-signup text-red-600"
             type="button"
-            onClick={clickedtoSignIn}
+            onClick={handleSignIn}
           >
             Sign In
           </button>
@@ -53,7 +66,10 @@ export default function SignUp() {
           ></input>
         </div>
         <div className="py-3"></div>
-        <button className="rectangleSignUp font-bold hover:bg-blue-900">
+        <button className="rectangleSignUp font-bold hover:bg-blue-900"
+        type = "button"
+        onClick = {handleSignIn}
+        >
           Sign Up
         </button>
       </div>
