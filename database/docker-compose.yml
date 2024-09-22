@@ -1,0 +1,19 @@
+name: project
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ws-db
+    ports:
+      - 4444:${POSTGRES_PORT}
+    volumes:
+      - ws-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_DB=${POSTGRES_DB}
+    networks:
+      - ws-net
+volumes:
+  ws-data:
+networks:
+  ws-net:
