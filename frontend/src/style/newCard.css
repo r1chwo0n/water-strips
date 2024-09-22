@@ -5,12 +5,23 @@
   height: 320px;
   border-radius: 20px;
 }
+
 .EllipseforNew {
   position: absolute;
   width: 200px;
   height: 200px;
   border-radius: 100px;
+  background-color: #ccc; /* Default background color */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+  cursor: pointer; /* Change cursor to pointer to indicate clickability */
 }
+
+/* Hover effect */
+.EllipseforNew:hover {
+  background-color: #aaa; /* Change background color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
 
 .plus-shape {
   width: 30%;

@@ -2,7 +2,21 @@ import { useState } from "react";
 import "../style/signin.css";
 import { useDispatch } from "react-redux";
 import { appStateType, setAppState } from "../store/Slices/webSocketSlice";
+import { useNavigate } from 'react-router-dom';
+
 export default function SignIn() {
+
+  const navigate = useNavigate();
+
+  
+  const handleSignUp = () => {
+    navigate('/signup');
+  };
+
+  const handleHistory = () => {
+    navigate('/history');
+  };
+
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -17,7 +31,7 @@ export default function SignIn() {
         className="relative w-[600px] h-[340px] mt-48"
         src="src\pic\signinframe.png"
       ></img>
-      <div className="absolute flex flex-col space-y-1 font-['Arial']">
+      <div className="absolute flex flex-col space-y-1 font-['Arial'] items-center justify-center">
         <div className="flex flex-col justify-center items-center">
           <h1 className="font-bold text-4xl text-center">Sign In</h1>
           <img
@@ -67,7 +81,7 @@ export default function SignIn() {
             </button>
           </div>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between space-x-24">
           <button
             className="relative text-xs text-red-500 hover:text-red-300"
             type="button"
@@ -77,7 +91,7 @@ export default function SignIn() {
           <button
             className="relative transition-underline font-bold"
             type="button"
-            onClick={clickedtoSignUp}
+            onClick={handleSignUp}
           >
             sign up
           </button>
@@ -113,6 +127,13 @@ export default function SignIn() {
             <h2 className="ml-2 font-bold">Facebook</h2>
           </button>
         </div>
+        <div className="py-1" />
+        <button 
+          className="rectangleSignIn font-bold hover:bg-blue-900 "
+         type="button"
+         onClick={handleHistory}>
+          Sign In
+        </button>
       </div>
     </>
   );

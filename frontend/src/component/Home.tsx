@@ -1,17 +1,27 @@
 import { useDispatch } from "react-redux";
 import "../style/home.css";
 import { appStateType, setAppState } from "../store/Slices/webSocketSlice";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 export default function Home() {
-  const dispatch = useDispatch();
-  const clickedtoSignIn = () => {
-    dispatch(setAppState(appStateType.SIGNIN));
+
+  const navigate = useNavigate();
+
+  const handleSignIn = () => {
+    navigate('/signin');
   };
-  const clickedtoSignUp = () => {
-    dispatch(setAppState(appStateType.SIGNUP));
+
+  
+  const handleSignUp = () => {
+    navigate('/signup');
   };
-  const clickedtoHistory = () => {
-    dispatch(setAppState(appStateType.HISTORY));
+
+  const handleHistory = () => {
+    navigate('/history');
   };
+
+  
   return (
     <>
       <div
@@ -38,7 +48,7 @@ export default function Home() {
           <button
             className="relative mr-4 transition-underline"
             type="button"
-            onClick={clickedtoSignIn}
+            onClick={handleSignIn}
           >
             sign in
           </button>
@@ -46,7 +56,7 @@ export default function Home() {
           <button
             className="relative transition-underline"
             type="button"
-            onClick={clickedtoSignUp}
+            onClick={handleSignUp}
           >
             sign up
           </button>
@@ -82,7 +92,7 @@ export default function Home() {
             <h1 className="text-4xl">quality</h1>
             <button
               className="w-72 h-11 text-2xl mt-6 md:mt-4 mb-6 bg-white rounded-2xl boxShadow hover:bg-gray-200"
-              onClick={clickedtoHistory}
+              onClick={handleHistory}
             >
               START TEST
             </button>

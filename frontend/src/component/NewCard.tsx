@@ -1,5 +1,14 @@
 import "../style/newCard.css";
+import { useNavigate } from 'react-router-dom';
+
 export default function NewCard() {
+
+  const navigate = useNavigate();
+
+  const handleAdd = () => {
+    navigate('/Add');
+  };
+
   const ellipseColor = {
     backgroundColor: "#e7e7e7",
   };
@@ -15,6 +24,7 @@ export default function NewCard() {
         <div
           className="EllipseforNew ml-10 mr-10 -mt-24 relative"
           style={ellipseColor}
+          onClick={handleAdd}
         >
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="plus-shape"></div>
