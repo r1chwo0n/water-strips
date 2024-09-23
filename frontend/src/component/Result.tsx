@@ -7,20 +7,8 @@ export default function Result() {
 
   const handleButtonClick = (buttonName: "overview" | "information") => { // Specify the type of buttonName
     setActiveButton(buttonName);
-    if (buttonName === "overview") {
-      handleOverview();
-    } else {
-      handleInformation();
-    }
   };
-
-  const handleOverview = () => {
-    
-  };
-
-  const handleInformation = () => {
-    
-  };
+      
 
   return (
     <div className="flex justify-center items-start min-h-screen">
@@ -54,6 +42,40 @@ export default function Result() {
             </button>
           </div>
         </div>
+        </div>
+                {/* Content Area - Now Below the Blue Section */}
+      <div className="w-full absolute justify-center mt-4  top-[400px] bg-white p-6 rounded-md shadow-md max-w-4xl"> {/* Moved content outside */}
+        {activeButton === "overview" ? (
+          <div className="flex flex-col items-start w-full">
+            <div className="flex items-center">
+              <div className="bg-red-600 w-8 h-8 mr-2" /> <span>PH: 1.2</span>
+            </div>
+            <div className="flex items-center mt-2">
+              <div className="bg-purple-600 w-8 h-8 mr-2" /> <span>A: 5.7</span>
+            </div>
+            <div className="flex items-center mt-2">
+              <div className="bg-green-600 w-8 h-8 mr-2" /> <span>B: 4.3</span>
+            </div>
+            <div className="flex items-center mt-2">
+              <div className="bg-yellow-600 w-8 h-8 mr-2" /> <span>C: 6.2</span>
+            </div>
+            <div className="flex items-center mt-2">
+              <div className="bg-orange-600 w-8 h-8 mr-2" /> <span>D: 8.3</span>
+            </div>
+            <div className="flex items-center mt-2">
+              <div className="bg-blue-800 w-8 h-8 mr-2" /> <span>E: 1.4</span>
+            </div>
+          </div>
+        ) : (
+          <div className="text-left">
+            <p className="text-lg">Water Quality Information</p>
+            <p className="mt-2">
+              The water quality is assessed based on various factors including PH levels, mineral
+              content, and safety for consumption. Maintaining a balanced PH is critical for
+              ensuring that the water is safe for both environmental and human use.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
