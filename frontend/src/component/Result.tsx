@@ -1,12 +1,25 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Result() {
-  // State to track the active button
-  const [activeButton, setActiveButton] = useState("overview");
+  const [activeButton, setActiveButton] = useState<string>("overview"); // Define the type for useState
+  const navigate = useNavigate();
 
-  // Handler for button clicks
-  const handleButtonClick = (buttonType: React.SetStateAction<string>) => {
-    setActiveButton(buttonType);
+  const handleButtonClick = (buttonName: "overview" | "information") => { // Specify the type of buttonName
+    setActiveButton(buttonName);
+    if (buttonName === "overview") {
+      handleOverview();
+    } else {
+      handleInformation();
+    }
+  };
+
+  const handleOverview = () => {
+    
+  };
+
+  const handleInformation = () => {
+    
   };
 
   return (

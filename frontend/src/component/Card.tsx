@@ -6,13 +6,15 @@ export default function Card() {
   const navigate = useNavigate();
 
   const handleDetail = () => {
-    navigate('/Detail');
+    navigate('/Result');
   }
 
 
   return (
     <div className="container">
       <div className="RectangleBlue mt-24 ml-20 font-['Arial']">
+
+        {/* woon */}
         
         <div className="boxColor" style={{ backgroundColor: "#D9D9D9" }}></div>
         

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "league";
+  src: url("../font/league.ttf");
+}
+
+.fontLeague {
+  font-family: league;
+}
+
+.Button {
+  background-color: #0085ff;
+  box-shadow: inset 2px 4px 4px rgba(19, 19, 19, 0.25);
+}
+
+.Button:hover {
+  background-color: #005bb5; /* สีที่คุณต้องการเปลี่ยนเมื่อ hover */
+}
