@@ -1,27 +1,21 @@
-import { useDispatch } from "react-redux";
 import "../style/home.css";
-import { appStateType, setAppState } from "../store/Slices/webSocketSlice";
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-
   const navigate = useNavigate();
 
   const handleSignIn = () => {
-    navigate('/signin');
+    navigate("/signin");
   };
 
-  
   const handleSignUp = () => {
-    navigate('/signup');
+    navigate("/signup");
   };
 
   const handleHistory = () => {
-    navigate('/history');
+    navigate("/history");
   };
 
-  
   return (
     <>
       <div
