@@ -6,7 +6,7 @@ export default function Card() {
   const navigate = useNavigate();
 
   const handleDetail = () => {
-    navigate('/Detail');
+    navigate('/Result');
   }
 
 
